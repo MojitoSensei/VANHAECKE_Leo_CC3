@@ -116,3 +116,65 @@ http-prod :
 
 <h3>Question 2.1 donner les URL des documentations de chacun des modules installés par la commande précédente.<h3>
 
+<pre><code>
+Voici les liens des modules installés par la commande :
+
+Express.js : "https://expressjs.com/en/5x/api.html"
+http-errors : "https://www.npmjs.com/package/http-errors"
+loglevel : "https://www.npmjs.com/package/loglevel"
+morgan : "https://www.npmjs.com/package/morgan"
+</code></pre>
+
+<h3>Question 2.2 vérifier que les trois routes fonctionnent.<h3>
+
+<pre><code>
+Les 3 routes foncionnent :
+
+GET : http://localhost:8000/index.html
+État : 200 OK
+Version : HTTP/1.1
+Transfert : 1,26 Ko (taille 940 o)
+Priorité de la requête : Highest
+Résolution DNS : Système
+
+GET : http://localhost:8000/random/5
+État : 200 OK
+Version : HTTP/1.1
+Transfert : 308 o (taille 80 o)
+Priorité de la requête : Highest
+Résolution DNS : Système
+
+GET : http://localhost:8000/
+État : 200 OK
+Version : HTTP/1.1
+Transfert : 1,26 Ko (taille 940 o)
+Priorité de la requête : Highest
+Résolution DNS : Système
+</code></pre>
+
+<h3>Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles sont nouvelles par rapport au serveur HTTP ?<h3>
+
+<pre><code>
+voici les en-têtes des réponses fournies par Express : 
+
+Accept-Ranges : bytes
+Cache-Control :	public, max-age=0
+Connection : keep-alive
+Content-Length : 940
+Content-Type : text/html; charset=UTF-8
+Date : Wed, 27 Sep 2023 22:06:24 GMT
+ETag : W/"3ac-18abba24bd9"
+Keep-Alive : timeout=5
+Last-Modified : Fri, 22 Sep 2023 06:44:50 GMT
+X-Powered-By : Express
+
+Les nouvelles lignes sont : Accept-Ranges, Cache-Control, Content-Length, ETag, Last-Modified, et X-Powered-By.
+</code></pre>
+
+<h3>Question 2.4 quand l’événement listening est-il déclenché ?<h3>
+
+<pre><code>
+L'événement listening est déclenché lorsque le servur Express commence a écouter sur le port 8000,
+cela ce produit après : 'app.listen(port, host);' de server-express.mjs 
+Dès que le server sera prêt, cela vas déclancher l'evement "listening", qui vas executer la fonction : 'server.on("listening", () => ...)'
+</code></pre>
