@@ -178,3 +178,32 @@ L'événement listening est déclenché lorsque le servur Express commence a éc
 cela ce produit après : 'app.listen(port, host);' de server-express.mjs 
 Dès que le server sera prêt, cela vas déclancher l'evement "listening", qui vas executer la fonction : 'server.on("listening", () => ...)'
 </code></pre>
+
+<h3>Question 2.5 indiquer quelle est l’option (activée par défaut) qui redirige / vers /index.html ?<h3>
+
+<pre><code>
+L'option d'Express qui redirige automatiquement une requête vers "/index.html" lorsqu'un chemin de fichier est manquant est appelée "fallthrough". Par défaut, cette option est activée dans le middleware express.static
+</code></pre>
+
+<h3>Question 2.6 visiter la page d’accueil puis rafraichir (Ctrl+R) et ensuite forcer le rafraichissement (Ctrl+Shift+R). Quels sont les codes HTTP sur le fichier style.css ? Justifier.<h3>
+
+<pre><code>
+Lors du raffraichissement de la page avec ctrl + r, on a :
+GET : http://localhost:8000/style.css
+État : 304 Not Modified
+Version : HTTP/1.1
+Transfert : 751 o (taille 486 o)
+Politique de référent : strict-origin-when-cross-origin
+Résolution DNS : Système
+
+Lors du raffraichissement de la page avec ctrl + shift + r, on a :
+GET :http://localhost:8000/style.css
+État : 200 OK
+Version : HTTP/1.1
+Transfert : 801 o (taille 486 o)
+Politique de référent : strict-origin-when-cross-origin
+Résolution DNS : Système
+
+Ceci est dû au cache qui vas etre utiliser plutot que de recharger une nouvelle fois les données de la page.
+si le cache est désactivé, lors de chaque rechargement de page l'on aura une requete 200.
+</code></pre>
