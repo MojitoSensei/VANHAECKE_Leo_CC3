@@ -207,3 +207,8 @@ Résolution DNS : Système
 Ceci est dû au cache qui vas etre utiliser plutot que de recharger une nouvelle fois les données de la page.
 si le cache est désactivé, lors de chaque rechargement de page l'on aura une requete 200.
 </code></pre>
+
+<h3>Question 2.7 vérifier que l’affichage change bien entre le mode production et le mode development.<h3>
+
+<pre><code>
+</code></pre>
