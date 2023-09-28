@@ -1,6 +1,9 @@
 import express from "express";
 import morgan from "morgan";
 import createError from 'http-errors';
+import logger from "loglevel";
+
+logger.setLevel(logger.levels.WARN);
 
 const host = "localhost";
 const port = 8000;
@@ -33,7 +36,7 @@ app.use((request, response, next) => {
     return next(createError(404));
 });
   
-  app.use((error, _request, response, _next) => {
+app.use((error, _request, response, _next) => {
     concole.debug(`default error handler: ${error}`);
     const status = error.status ?? 500;
     const stack = app.get("env") === "development" ? error.stack : "";

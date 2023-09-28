@@ -211,4 +211,20 @@ si le cache est désactivé, lors de chaque rechargement de page l'on aura une r
 <h3>Question 2.7 vérifier que l’affichage change bien entre le mode production et le mode development.<h3>
 
 <pre><code>
+En mode developpement, on a cet affichage :
+ReferenceError: concole is not defined
+    at file:///c:/Users/Utilisateur/Desktop/S4%20UNC/devweb/devwebTP5/VANHAECKE_Leo_CC3/server-express.mjs:40:5
+    at Layer.handle_error (c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\layer.js:71:5)
+    at trim_prefix (c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\index.js:326:13)
+    at c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle_error (c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\layer.js:67:12)
+    at trim_prefix (c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\index.js:326:13)
+    at c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (c:\Users\Utilisateur\Desktop\S4 UNC\devweb\devwebTP5\VANHAECKE_Leo_CC3\node_modules\express\lib\router\index.js:346:12)
+
+En mode production, on a cet affichage :
+
+Internal Server Error
 </code></pre>
