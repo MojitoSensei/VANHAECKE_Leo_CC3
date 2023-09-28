@@ -6,7 +6,7 @@
 
 <h3>Question 1.1 donner la liste des en-têtes de la réponse HTTP du serveur.<h3>
 
-<code>
+<pre><code>
 Les en-têtes de la réponse HTTP du serveur localhost peuvent être trouvées dans la page : http://localhost:8000 
 avec l’option F12 dans l’onglet network, on peut voir l'en-tête 
 Response Headers:
@@ -15,7 +15,7 @@ Response Headers:
     Date: Wed, 20 Sep 2023 06:15:30 GMT
     Keep-Alive: timeout=5
     Transfer-Encoding: chunked
-</code>
+</code></pre>
 
 <h3>Question 1.2 donner la liste des en-têtes qui ont changé depuis la version précédente.<h3>
 
