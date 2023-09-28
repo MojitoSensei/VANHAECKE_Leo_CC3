@@ -32,12 +32,12 @@ app.get("/random/:nb", async function (request, response, next) {
 });
 
 app.use((request, response, next) => {
-    concole.debug(`default route handler : ${request.url}`);
+    console.debug(`default route handler : ${request.url}`);
     return next(createError(404));
 });
   
 app.use((error, _request, response, _next) => {
-    concole.debug(`default error handler: ${error}`);
+    console.debug(`default error handler: ${error}`);
     const status = error.status ?? 500;
     const stack = app.get("env") === "development" ? error.stack : "";
     const result = { code: status, message: error.message, stack };
